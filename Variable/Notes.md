@@ -1,3 +1,7 @@
+
+[Understanding JavaScript Variables and Data Types](https://medium.com/@pawan2505/understanding-javascript-variables-and-data-types-d0e4ad171bab)
+
+
 ## Rules for Variables in JavaScript
 
 1. **Variable Declaration Keywords**:

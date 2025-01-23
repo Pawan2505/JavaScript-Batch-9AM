@@ -1,5 +1,8 @@
 # JavaScript Notes
 
+[Intro to JavaScript: ES5 vs ES6](https://medium.com/@pawan2505/intro-to-javascript-es5-vs-es6-dcfad3bf6f8e)
+
+
 ## Introduction
 
 JavaScript was invented by Brendan Eich in 1995 while he was working at **Netscape**.
