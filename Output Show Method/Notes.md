@@ -52,8 +52,4 @@ The document.getElementsByClassName() method returns a collection of elements wi
 You can access individual elements in the collection using an index, e.g., [0] for the first element, [1] for the second, etc.
 This example demonstrates how to modify the content of elements with a certain class name.
 
-### Additional Notes
 
-Ensure you use these methods responsibly to avoid conflicts in your DOM.
-Use modern JavaScript features like query selectors (document.querySelector, document.querySelectorAll) for better flexibility.
-```
