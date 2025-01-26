@@ -1,1 +1,1 @@
-[View JavaScript Flow Chart](../flowchart.html)
+[View JavaScript Flow Chart](Flow_Chart/flowchart.html)
