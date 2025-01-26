@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Flowchart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #409eff;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .tree-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .tree {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .tree-level {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .node {
+            background: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            padding: 10px 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+            z-index: 1;
+            min-width: 120px;
+        }
+
+        .node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            background-color: #f0f8ff;
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .line {
+            stroke: #409eff;
+            stroke-width: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Syllabus Flowchart</h1>
+    <div class="tree-container">
+        <div class="tree">
+            <svg id="connections"></svg>
+            <!-- Root Level -->
+            <div class="tree-level">
+                <div class="node" id="node1">Introduction to JavaScript</div>
+            </div>
+            <!-- Level 1 -->
+            <div class="tree-level">
+                <div class="node" id="node2">JavaScript Output Methods</div>
+                <div class="node" id="node3">Data Types and Variables</div>
+            </div>
+            <!-- Level 2 -->
+            <div class="tree-level">
+                <div class="node" id="node4">Operators</div>
+                <div class="node" id="node5">Control Flow</div>
+                <div class="node" id="node6">Looping</div>
+                <div class="node" id="node7">Functions</div>
+            </div>
+            <!-- Level 3 -->
+            <div class="tree-level">
+                <div class="node" id="node8">ES5 vs. ES6</div>
+                <div class="node" id="node9">Objects</div>
+                <div class="node" id="node10">Arrays & Strings</div>
+                <div class="node" id="node11">DOM Manipulation</div>
+            </div>
+            <!-- Level 4 -->
+            <div class="tree-level">
+                <div class="node" id="node12">Event Handling</div>
+                <div class="node" id="node13">Error Handling</div>
+                <div class="node" id="node14">OOP (Object-Oriented Programming)</div>
+                <div class="node" id="node15">Asynchronous JavaScript</div>
+                <div class="node" id="node16">AJAX and Fetch API</div>
+            </div>
+            <!-- Level 5 -->
+            <div class="tree-level">
+                <div class="node" id="node17">Advanced Topics</div>
+                <div class="node" id="node18">Projects</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const svg = document.getElementById('connections');
+
+        function connectNodes(parentId, childId) {
+            const parent = document.getElementById(parentId);
+            const child = document.getElementById(childId);
+
+            const parentRect = parent.getBoundingClientRect();
+            const childRect = child.getBoundingClientRect();
+
+            const svgRect = svg.getBoundingClientRect();
+
+            const startX = parentRect.left + parentRect.width / 2 - svgRect.left;
+            const startY = parentRect.bottom - svgRect.top;
+            const endX = childRect.left + childRect.width / 2 - svgRect.left;
+            const endY = childRect.top - svgRect.top;
+
+            const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+            line.setAttribute("x1", startX);
+            line.setAttribute("y1", startY);
+            line.setAttribute("x2", endX);
+            line.setAttribute("y2", endY);
+            line.setAttribute("class", "line");
+
+            svg.appendChild(line);
+        }
+
+        // Wait for the DOM to render before calculating positions
+        window.onload = () => {
+            connectNodes("node1", "node2");
+            connectNodes("node1", "node3");
+            connectNodes("node2", "node4");
+            connectNodes("node2", "node5");
+            connectNodes("node3", "node6");
+            connectNodes("node4", "node7");
+            connectNodes("node5", "node8");
+            connectNodes("node6", "node9");
+            connectNodes("node7", "node10");
+            connectNodes("node7", "node11");
+            connectNodes("node8", "node12");
+            connectNodes("node9", "node13");
+            connectNodes("node10", "node14");
+            connectNodes("node11", "node15");
+            connectNodes("node12", "node16");
+            connectNodes("node13", "node17");
+            connectNodes("node14", "node18");
+        };
+    </script>
+</body>
+</html>
