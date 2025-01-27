@@ -110,6 +110,6 @@ console.log(!(a < b || a < c));  // false => Logical NOT
 console.log(!(a > b || a < c));  // false => Logical NOT
 ```
 
-```markdown
+
 For more details, read the full article on Medium: [Understanding JavaScript Operators](https://medium.com/@pawan2505/understanding-javascript-operators-0b5e39859ed3)
-```
+
