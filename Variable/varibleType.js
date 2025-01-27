@@ -1,69 +1,54 @@
-//  let , const, var  => keyword
 
-// JavaScript has 8 Datatypes
-// String
-// Number
-// Bigint
-// Boolean
-// Undefined
-// Null
-// Symbol
-// Object
+// Declare variables using let, const, var
+// JavaScript has 8 data types: String, Number, Bigint, Boolean, Undefined, Null, Symbol, Object
 
-// let num = 10;
-// console.log(num);
+// Number data type
+let num = 10;
+console.log(num);              // Output: 10
+console.log(typeof num);       // Output: 'number'
 
-// console.log(typeof num);
+// String data type
+let name = "Pawan Maurya";
+console.log(name);             // Output: 'Pawan Maurya'
+console.log(typeof name);      // Output: 'string'
 
-// let name = "Pawan Maurya";
-// console.log(name);
-// console.log(typeof name)
+// Boolean data type
+let isvalue = true;
+console.log(isvalue);          // Output: true
+console.log(typeof isvalue);   // Output: 'boolean'
 
-// let isvalue = true;
-// console.log(isvalue);
-// console.log(typeof isvalue);
+// Null data type
+let x = null;
+console.log(x);                // Output: null
+console.log(typeof x);         // Output: 'object' (this is a known bug in JavaScript)
 
+// Undefined data type
+let num1;
+console.log(num1);             // Output: undefined
+console.log(typeof num1);      // Output: 'undefined'
 
-// let x = null;
+// Array (object type)
+let brr = [];                  // Empty array
+let arr = [10, 20, 30, 40, 50];
+console.log(arr);              // Output: [10, 20, 30, 40, 50]
+console.log(typeof arr);       // Output: 'object'
 
-// console.log(x)
+// Floating point number
+let value = 28.78;
+console.log(value);            // Output: 28.78
+console.log(typeof value);     // Output: 'number'
 
-// console.log(typeof x);
+// Bigint data type
+let num2 = 1234567n;
+console.log(num2);             // Output: 1234567n
+console.log(typeof num2);      // Output: 'bigint'
 
-// let num1;
+// Symbol data type
+let num4 = Symbol(12345);
+console.log(num4.toString());  // Output: 'Symbol(12345)'
+console.log(typeof num4);      // Output: 'symbol'
 
-// console.log(num1);
-// console.log(typeof num1);
-
-// let brr = []; // empty array
-
-// let arr = [10,20,30,40,50];
-
-// console.log(arr);
-// console.log(typeof arr);
-
-
-
-// let value = 28.78;
-
-// console.log(value);
-// console.log(typeof value);
-
-
-// let num2 = 1234567n;
-
-// console.log(num2);
-// console.log(typeof num2);
-
-
-// let num4 = Symbol(12345);
-
-// console.log(num4.toString());
-// console.log(typeof num4)
-
-
-
-let sejal = {name : "Sejal", age : 123, salary : 100000000};
-
-console.log(sejal);
-console.log(typeof sejal);
+// Object data type
+let sejal = {name: "Sejal", age: 123, salary: 100000000};
+console.log(sejal);            // Output: {name: "Sejal", age: 123, salary: 100000000}
+console.log(typeof sejal);     // Output: 'object'
