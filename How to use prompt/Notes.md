@@ -146,23 +146,6 @@ console.log(typeof num4.toString()); // Check the type (string)
 // Check the type of the original number
 console.log(typeof num4); // Should still be a number
 ```
-```
-
-I will now update the `Notes.md` file in your repository with these notes.Here's the detailed note on the concepts discussed in your JavaScript code example:
-
-# Notes on JavaScript Type Conversion
-
-## Prompt User Input
-### Theory
-The `prompt()` function in JavaScript is used to display a dialog box that prompts the user for input. The input provided by the user is returned as a string.
-
-### Example
-```javascript
-let num = prompt("Enter Number:");
-document.writeln(num); // Output the input
-document.writeln(typeof num); // Check the type (string)
-```
-
 ## Converting String to Integer
 ### Theory
 The `parseInt()` function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems). It is useful for converting strings to numbers when the input is expected to be an integer.
