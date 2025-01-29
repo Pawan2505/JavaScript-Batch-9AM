@@ -1,0 +1,36 @@
+.container {
+  width: 600px;
+  height: 350px;
+  border: 2px solid #5a5353f2;
+  margin: 100px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.calculate-heading {
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px;
+  font-size: 24;
+  border-radius: 5px;
+}
+
+button {
+  width: 20%;
+  margin: 10px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: green;
+  border-radius: 10px;
+  color: white;
+}
+
+button:hover {
+  background-color: rgb(8, 63, 8);
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="calculate-heading">Basic Calculator</h1>
+        <input id="input-num1" type="number" placeholder="Enter First Number">
+        <input id="input-num2" type="number" placeholder="Enter Second Number">
+        <button onclick="calculate('add')">Addition</button>
+        <button onclick="calculate('sub')">Subtract</button>
+        <button onclick="calculate('mul')">Multiply</button>
+        <button onclick="calculate('divide')">Divide</button>
+        <div id="answer"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
