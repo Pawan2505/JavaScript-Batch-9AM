@@ -20,7 +20,7 @@ Create a simple web application that allows users to input a score and calculate
    - Style the body, calculator container, input field, button, and result display to ensure the web page is visually appealing.
 
 3. **JavaScript Functionality**:
-   - Create a `grade.js` file.
+   - Create a `script.js` file.
    - Implement a function to retrieve the score from the input field.
    - Validate the input value (ensure it is a number between 0 and 100).
    - Determine the grade based on the score:
@@ -33,7 +33,7 @@ Create a simple web application that allows users to input a score and calculate
 
 #### Instructions
 1. Create a new directory for the project.
-2. Inside the directory, create three files: `index.html`, `style.css`, and `grade.js`.
+2. Inside the directory, create three files: `index.html`, `style.css`, and `script.js`.
 3. Implement the project requirements as described above.
 4. Open `index.html` in a web browser to use the Grade Calculator.
 

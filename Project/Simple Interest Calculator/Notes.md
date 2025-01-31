@@ -20,7 +20,7 @@ Create a simple web application that allows users to input the principal amount,
    - Style the body, calculator container, input fields, button, and result display to ensure the web page is visually appealing.
 
 3. **JavaScript Functionality**:
-   - Create an `interest.js` file.
+   - Create an `script.js` file.
    - Implement a function to retrieve the values from the input fields.
    - Validate the input values (ensure they are positive numbers).
    - Calculate the simple interest using the formula.
@@ -28,7 +28,7 @@ Create a simple web application that allows users to input the principal amount,
 
 #### Instructions
 1. Create a new directory for the project.
-2. Inside the directory, create three files: `index.html`, `style.css`, and `interest.js`.
+2. Inside the directory, create three files: `index.html`, `style.css`, and `script.js`.
 3. Implement the project requirements as described above.
 4. Open `index.html` in a web browser to use the Simple Interest Calculator.
 
