@@ -11,8 +11,8 @@
 
 // let arr = [];
 
-let arr1 = [12,85,63,78,96,2,45];
+// let arr1 = [12,85,63,78,96,2,45];
 
-let minValue = Math.min(...arr1);
+// let minValue = Math.min(...arr1);
 
-console.log(minValue);
+// console.log(minValue);
