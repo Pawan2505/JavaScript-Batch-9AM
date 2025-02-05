@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Prime Number Checker</h2>
+        <p>Find all prime numbers between a given range.</p>
+
+        <!-- Input fields for range -->
+        <label for="start">Start:</label>
+        <input type="number" id="start" value="1">
+        
+        <label for="end">End:</label>
+        <input type="number" id="end" value="20">
+
+        <button onclick="findPrimeNumbers()">Find Primes</button>
+
+        <h3>Prime Numbers in the Range:</h3>
+        <pre id="result"></pre>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -82,14 +82,57 @@
 // 👉 Calculate the factorial of a given number (e.g., 5! = 5×4×3×2×1).
 
 
+// let num = 10;
 
+// let factorial = 1;
+
+// for(let i = num; i >= 1; i--){
+//     factorial *= i;
+// }
+
+// console.log(` ${num}! is :  ${factorial}`)
 
 
 // 3. Factors of a number
 // 👉 Find all the factors (divisors) of a given number.
 
+// let num = 20;
+
+// let fact = "";
+
+// for(let i = 1; i <=num; i++){
+//     if(num%i == 0){
+//         // console.log(i)
+
+//         fact += `${i} `;
+//     }
+// }
+
+// console.log(fact)
+
+// let num = 20;
+
+// let fact = [];
+
+// let index = 0;
+// for(let i = 1; i <=num; i++){
+//     if(num%i == 0){
+//         // console.log(i)
+
+//         // fact += `${i} `;
+
+//         fact[index] = i;
+//         index++;
+//     }
+// }
+
+// console.log(fact)
+
+
 // 4. Prime Factors of a number
 // 👉 Find the prime factors of a number (e.g., 12 = 2×2×3).
+
+
 
 // for (let i = 1; i <= 5; i++) {
 //     console.log(i);

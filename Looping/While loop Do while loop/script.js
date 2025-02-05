@@ -1,6 +1,22 @@
 // 1. Sum of digits of a number
 // 👉 Find the sum of digits of an input number.
 
+
+// let num = 12345;
+
+// let sum = 0;
+
+// while(num > 0){
+//     let digits = num%10;
+
+//     sum += digits;
+
+//     num = Math.floor(num/10);
+// }
+
+// console.log(sum);
+
+
 // 2. Reverse of a number
 // 👉 Reverse a given number (e.g., 1234 → 4321).
 
@@ -37,3 +53,38 @@
 // 12. Friendly pair
 // 👉 Two numbers are a friendly pair if their sum of divisors divided by the number itself is equal (e.g., 6 & 28).
 
+
+
+
+// let i = 1;
+// while (i <= 5) {
+//     console.log(i);
+//     i++;
+// }
+
+// let i = 5;
+// while (i >=1) {
+//     console.log(i);
+//     i--;
+// }
+
+
+// let i = 1;
+// do {
+//     console.log(i);
+//     i++;
+// } while (i <= 5);
+
+
+// let i = 5;
+// do {
+//     console.log(i);
+//     i--;
+// } while (i >= 1);
+
+
+// let i = -5;
+// do {
+//     console.log(i);
+//     i--;
+// } while (i >= 1);
