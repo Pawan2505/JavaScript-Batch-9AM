@@ -20,6 +20,20 @@
 // 2. Reverse of a number
 // 👉 Reverse a given number (e.g., 1234 → 4321).
 
+
+// let num = 1256;
+
+// let rev = 0;
+
+// while(num > 0){
+//     let digit = num%10;
+//     rev = rev*10 +digit;
+//     num = Math.floor(num/10);
+// }
+
+// console.log(rev);
+
+
 // 3. Power of a number
 // 👉 Compute X^Y (X raised to the power Y) without using pow() function.
 
@@ -88,3 +102,18 @@
 //     console.log(i);
 //     i--;
 // } while (i >= 1);
+
+
+// let arr = [];
+
+// arr.push(10);
+// arr.push(20);
+// arr.push(30);
+// arr.push(40);
+
+// console.log(arr);
+// console.log(arr.length);
+
+// arr.pop();
+
+// console.log(arr)
