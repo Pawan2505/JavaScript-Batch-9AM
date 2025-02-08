@@ -37,6 +37,13 @@
 // 3. Power of a number
 // 👉 Compute X^Y (X raised to the power Y) without using pow() function.
 
+let num = 5;
+let n = 2;
+
+let answer = Math.pow(5,2);
+
+console.log(answer);
+
 // 4. Palindrome number
 // 👉 Check if a number reads the same forward and backward (e.g., 121, 1221).
 
