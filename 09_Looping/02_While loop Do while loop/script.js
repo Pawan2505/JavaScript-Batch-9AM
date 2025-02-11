@@ -268,40 +268,40 @@
 //     console.log("Not Abundant number");
 // }
 
-// 12. Friendly pair
-// 👉 Two numbers are a friendly pair if their sum of divisors divided by the number itself is equal (e.g., 6 & 28).
+// // 12. Friendly pair
+// // 👉 Two numbers are a friendly pair if their sum of divisors divided by the number itself is equal (e.g., 6 & 28).
 
 
-function friendlyPair(num1, num2){
+// function friendlyPair(num1, num2){
 
-let sum1 = 0;
+// let sum1 = 0;
 
-for(let i = 1; i <= num1; i++){
-    if(num1%i == 0){
-        sum1 += i;
-    }
-}
+// for(let i = 1; i <= num1; i++){
+//     if(num1%i == 0){
+//         sum1 += i;
+//     }
+// }
 
-let sum2 = 0;
+// let sum2 = 0;
 
-for(let i = 1; i <= num2; i++){
-    if(num2%i == 0){
-        sum2 += i;
-    }
-}
+// for(let i = 1; i <= num2; i++){
+//     if(num2%i == 0){
+//         sum2 += i;
+//     }
+// }
 
-return sum1/num1 == sum2/num2;
+// return sum1/num1 == sum2/num2;
 
-}
+// }
 
-let num1 = 4321;
-let num2 = 4680;
+// let num1 = 4321;
+// let num2 = 4680;
 
-if(friendlyPair(num1, num2)){
-    console.log("Friendly pair")
-}else{
-    console.log("Not Friendly pair")
-}
+// if(friendlyPair(num1, num2)){
+//     console.log("Friendly pair")
+// }else{
+//     console.log("Not Friendly pair")
+// }
 
 
 
