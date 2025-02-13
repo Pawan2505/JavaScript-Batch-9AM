@@ -185,6 +185,8 @@ const sumFunction = function(num1, num2) {
     console.log(num1 + num2);
 };
 
+// sumFunction();
+
 // Arrow function equivalent
 const sumArrow = (a, b) => {
     console.log(a + b);
