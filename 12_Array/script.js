@@ -1,102 +1,63 @@
+// ******************** ARRAY METHODS IN JAVASCRIPT ********************
 
-//  Create array
-
-// let arr = [10,29,37]
-
-// console.log(arr)
-
-// let arr = [10,29,37,90.7,"Pawan",true,'a']
-
-// print array
-
-// console.log(arr)
-
-let arr = []  // empty array
+// 1. Creating an array
+let arr = [];  // Empty array
 console.log(arr);
 
-// 1. push() -> insert element at end of array
-arr.push(10)
-
-console.log(arr);
-arr.push(20)
-arr.push(30)
-arr.push(40)
-arr.push(50)
-
-// arr.push(20,30,40,50)
-
+// 2. push() -> Adds elements to the end of the array
+arr.push(10);
 console.log(arr);
 
-// 2. pop() : it remove only one eleent from last index of array
+arr.push(20, 30, 40, 50); // Multiple elements can be added at once
+console.log(arr);
 
-console.log(`Deleted element from array :  ${arr.pop()}`)
+// 3. pop() -> Removes the last element from the array
+console.log(`Deleted element from array: ${arr.pop()}`);
+console.log(arr);
 
-console.log(arr)
+// 4. shift() -> Removes the first element from the array
+console.log("Element removed from start index: ", arr.shift());
+console.log(arr);
 
+// 5. unshift() -> Adds elements at the beginning of the array
+arr.unshift(100, 200, 300, 400);
+console.log(arr);
 
-// 3. shift() : only one remove -> element
+// 6. splice(start, deleteCount, insertItems...) 
+// -> Modifies an array by removing, replacing, or adding elements
+// Example: Removing 2 elements from index 2 and adding new elements
+arr.splice(2, 2, 11, 23, 45, 77, 8, 9);
+console.log(arr);
 
-console.log("Element remove from start index of array : ",arr.shift())
+// 7. slice(start, end) 
+// -> Returns a shallow copy of a portion of an array without modifying the original
+console.log(arr.slice(1, 5)); // Extracts elements from index 1 to 4
 
-console.log(arr)
+// 8. at(index) -> Returns the element at the specified index
+console.log(arr.at(2)); // Element at index 2
 
-// 4. unshift()
-arr.unshift(100,200,300,400)
+// 9. indexOf(element) -> Returns the first index of the specified element, -1 if not found
+console.log(arr.indexOf(11)); 
 
-console.log(arr)
+// 10. arr.length -> Returns the total number of elements in the array
+console.log(arr.length);
 
-// 5. splice()
+// 11. includes(element) -> Checks if an element exists in the array (returns true/false)
+console.log(arr.includes(200));
 
-// arr.splice(start, deletecount, insert)
+// 12. filter(callback) -> Returns a new array with elements that satisfy the condition
+// Example: Filtering even numbers
+let evenNumbers = arr.filter((item) => item % 2 === 0);
+console.log("Even Numbers:", evenNumbers);
 
-// arr.splice(2,2,11,23,45,77,8,9)
+// 13. forEach(callback) -> Iterates over an array and executes a function for each element
+arr.forEach((item) => console.log(item));
 
+// 14. map(callback) -> Creates a new array by applying a function to each element
+let squaredNumbers = arr.map((item) => item * item);
+console.log("Squared Numbers:", squaredNumbers);
 
-// console.log(arr)
-// console.log(arr[2])
-
-// 6. slice()
-
-// console.log(arr.slice(1,5));
-
-// 7. at()
-
-// console.log(arr.at(2))
-
-// 8. indexOf()
-
-// console.log(arr.indexOf(11))
-
-// 9. arr.length
-
-// console.log(arr.length);
-
-// 10. includes()
-
-// console.log(arr.includes(200))
-
-// console.log("Even Number : ")
-
-// arr.filter((item) => {
-//     if(item%2 == 0){
-//         console.log(item)
-//     }
-// })
-
-// console.log(arr)
-
-// 11. filter()
-
-// let brr = arr.filter((item) => item%2 == 0)
-
-// console.log(brr)
-
-//12. forEach()
-
-// arr.forEach((item) =>{
-//     console.log(item);
-// })
-
-// arr.forEach((item) =>console.log(item))
-
-// map, reduce, 
+// 15. reduce(callback, initialValue) 
+// -> Reduces the array to a single value (e.g., sum of all elements)
+let sum = arr.reduce((acc, item) => acc + item, 0);
+console.log("Sum of array elements:", sum);
