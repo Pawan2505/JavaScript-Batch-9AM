@@ -59,5 +59,14 @@ console.log("Squared Numbers:", squaredNumbers);
 
 // 15. reduce(callback, initialValue) 
 // -> Reduces the array to a single value (e.g., sum of all elements)
-let sum = arr.reduce((acc, item) => acc + item, 0);
-console.log("Sum of array elements:", sum);
+
+// let sum = arr.reduce((sum, item) => sum + item, 0);
+// console.log("Sum of array elements:", sum);
+
+// let arr1 = [10,20,30,40,50,60]
+
+// let add = arr1.reduce((result,element) => result+element,0)
+
+// console.log(add);
+
+
