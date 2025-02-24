@@ -115,8 +115,6 @@
 // // Displaying the object with updated subjects
 // console.log(student);
 
-
-
 // let student = [
 //   { name: "vishwa", salary:0 },
 //   { name: "vatsal" },
@@ -124,7 +122,7 @@
 //   { name: "jaimin",salary:10000 },
 //   { name: "mastur",salary:-17 }
 // ]
-              
+
 // // student.forEach((item)=>console.log(item));
 
 // console.log(student[3].salary)
@@ -165,8 +163,6 @@
 
 // let arr = Object.create(person);
 
-
-
 // arr.name = "Pawan";
 // arr.sn = 123
 
@@ -185,7 +181,6 @@
 // ];
 // console.log(students[1].name); // Output: Sara
 
-
 // let value = students.find((s) => s.name == "Kunal")
 
 // console.log(value)
@@ -193,7 +188,6 @@
 // let values = students.filter((s) => s.name == "unal")
 
 // console.log(values)
-
 
 // const fruits = [
 //   ["apples", 300],
@@ -223,7 +217,6 @@
 // console.log(person1)
 // console.log(person2)
 
-
 // Create an Array
 const fruits = [
   { name: "apples", quantity: 300 },
@@ -245,12 +238,11 @@ let text = "These fruits are Ok: <br>";
 
 for (let [x, y] of result.ok.entries()) {
   text += y.name + " " + y.quantity + "<br>";
-
 }
 console.log(text);
-  
+
 text += "<br>These fruits are low: <br>";
 for (let [x, y] of result.low.entries()) {
   text += y.name + " " + y.quantity + "<br>";
 }
-console.log(text)
+console.log(text);
