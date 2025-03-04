@@ -1,0 +1,11 @@
+
+.h1Class{
+    font-size: 40px;
+    color: green;
+    background-color: gray;
+}
+
+.removeClass{
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
