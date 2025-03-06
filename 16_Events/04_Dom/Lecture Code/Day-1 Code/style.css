@@ -1,0 +1,12 @@
+/* Style for the h1 element when it gets the class "h1Class" */
+.h1Class {
+  color: blue; /* Blue text color */
+  background-color: yellow; /* Yellow background */
+  font-size: 2rem; /* Larger font size */
+  text-align: center; /* Center-align the text */
+}
+
+.removeClass {
+  color: red; /* Red text color for the class we remove */
+  font-weight: bold; /* Bold text style */
+}

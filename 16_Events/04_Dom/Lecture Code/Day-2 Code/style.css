@@ -1,0 +1,26 @@
+/* Style for the h1 element when it has the class 'h1Class' */
+.h1Class {
+  color: blue; /* Blue text color */
+  background-color: yellow; /* Yellow background */
+  font-size: 2rem; /* Larger font size */
+  text-align: center; /* Center-align the text */
+}
+
+/* Remove class styling */
+.removeClass {
+  color: red; /* Red text color */
+  font-weight: bold; /* Bold text style */
+}
+
+/* Style for paragraph elements */
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+/* Style for paragraphs after toggle */
+p.toggled {
+  color: green;
+  font-style: italic;
+}
