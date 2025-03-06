@@ -9,3 +9,10 @@
     letter-spacing: 5px;
     word-spacing: 10px;
 }
+
+
+.product-list{
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+}
