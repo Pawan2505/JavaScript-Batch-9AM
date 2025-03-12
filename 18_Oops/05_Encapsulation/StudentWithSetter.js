@@ -4,6 +4,7 @@ class Student {
   #name; // Private field for name
   #age; // Private field for age
 
+
   constructor(name, age) {
     this.#name = name; // Initialize private field 'name'
     this.#age = age; // Initialize private field 'age'
