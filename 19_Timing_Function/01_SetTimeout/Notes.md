@@ -153,6 +153,5 @@ setTimeout(() => {
    - Implementing animations.
    - Debouncing user input.
    - Simulating delays in actions.
-5. **Handling `this`**: When using `setTimeout()` inside an object method, be cautious about the `this` keyword, and use arrow functions if necessary.
 
 ---
