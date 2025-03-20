@@ -1,51 +1,64 @@
-// let count = 1;
+// Initialize a variable `count` with a value of 1
+let count = 1;
 
-// function counter() {
-//     console.log(`Count : ${count}`)
-//     count++
-// }
+// Function to log the current value of `count` and increment it
+function counter() {
+  console.log(`Count : ${count}`);
+  count++; // Increment count by 1 after each function call
+}
 
-// let interval = setInterval(counter, 1000)
+// Set an interval to call the `counter` function every 1 second (1000 milliseconds)
+let interval = setInterval(counter, 1000);
 
-// setTimeout(() => {
-//     clearInterval(interval);
-// },10000)
+// After 10 seconds, stop the interval using clearInterval
+setTimeout(() => {
+  clearInterval(interval); // This will stop the counter after 10 seconds
+}, 10000);
 
-// console.log("Start");
+console.log("Start");
 
-// setTimeout(() => {
-//   console.log("This is after 2 seconds");
-// }, 2000);
+// Set a timeout to log a message after 2 seconds
+setTimeout(() => {
+  console.log("This is after 2 seconds"); // Log message after 2 seconds
+}, 2000);
 
-// console.log("End");
+console.log("End");
 
-// let timer = setTimeout(() => {
-//   console.log("This won't be shown.");
-// }, 5000);
+// Set a timeout to log a message after 5 seconds
+let timer = setTimeout(() => {
+  console.log("This won't be shown."); // This will not execute because we clear the timeout below
+}, 5000);
 
-// console.log("Clear...")
-// clearTimeout(timer);
+console.log("Clear...");
 
-// let timeoutId;
+// Clear the timeout we set earlier, so the message won't be shown
+clearTimeout(timer);
 
-// function handleSearchInput() {
-//   // Clear any previous timeout
-//   timeoutId = setTimeout(() => {
-//     console.log("Searching for: ");
-//   }, 500); // Wait for 500ms after the user stops typing
-// clearTimeout(timeoutId);
-// }
+// Example of using setTimeout to handle search input after a delay
+let timeoutId;
 
-// handleSearchInput()
+// Function to simulate handling search input with a delay (debouncing)
+function handleSearchInput() {
+  // Clear any previous timeout if the user is typing again
+  timeoutId = setTimeout(() => {
+    console.log("Searching for: ");
+  }, 500); // Wait for 500ms after the user stops typing
+  clearTimeout(timeoutId); // Clear timeout to prevent the search from being triggered immediately
+}
 
-// const endDate = "Thu Mar 20 2025 11:28:14 AM"
+// Call the handleSearchInput function
+handleSearchInput();
 
-// const end = new Date(endDate)
+// Calculate the time difference between now and a specific end date
+const endDate = "Thu Mar 20 2025 11:28:14 AM";
 
-// const now = new Date();
+// Create a new Date object for the end date
+const end = new Date(endDate);
 
-// // let diff = (end - now)  // milisecond
+// Create a new Date object for the current date and time
+const now = new Date();
 
-//  let diff = (end - now)/1000/3600  // second
+// Calculate the difference between the two dates in hours
+let diff = (end - now) / 1000 / 3600; // Convert difference from milliseconds to hours
 
-// console.log(diff)
+console.log(diff); // Log the difference (in hours) between now and the end date
