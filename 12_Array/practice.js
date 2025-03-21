@@ -17,10 +17,10 @@
 //     console.log(item)
 // })
 
-const arr = [2, 3, 4];
+// const arr = [2, 3, 4];
 
-arr.map((item) => {
-  console.log(item);
-});
+// arr.map((item) => {
+//   console.log(item);
+// });
 
 // console.log(brr);
