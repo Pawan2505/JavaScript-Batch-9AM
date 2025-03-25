@@ -111,7 +111,7 @@ Local Storage is widely used in various web applications, especially in the  mar
 
 #### **Advantages:**
 
-- **Persistence**: Local Storage keeps data even after closing the browser. This is useful for users in India with intermittent internet connections, as they can still retain settings and cart items without needing a constant connection.
+- **Persistence**: Local Storage keeps data even after closing the browser. This is useful for users with intermittent internet connections, as they can still retain settings and cart items without needing a constant connection.
 - **Large Capacity**: It offers up to **5MB** of storage per domain, which is far more than cookies, which usually only offer 4KB.
 - **Simplicity**: The API is easy to use and follows a simple key-value structure.
 

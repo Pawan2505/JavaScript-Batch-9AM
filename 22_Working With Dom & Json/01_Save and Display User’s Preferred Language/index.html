@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Storage</title>
+</head>
+
+<body>
+    <h1>Language Preference</h1>
+    <button id="setEnglish">Set Language to English</button>
+    <button id="setHindi">Set Language to Hindi</button>
+
+    <script>
+        // Check for stored language preference
+        const currentLanguage = localStorage.getItem("language");
+        if (currentLanguage) {
+            document.body.innerHTML += `<p>Current Language: ${currentLanguage}</p>`;
+        }
+
+        document
+            .getElementById("setEnglish")
+            .addEventListener("click", function () {
+                localStorage.setItem("language", "English");
+                alert("Language set to English");
+            });
+
+        document
+            .getElementById("setHindi")
+            .addEventListener("click", function () {
+                localStorage.setItem("language", "Hindi");
+                alert("Language set to Hindi");
+            });
+    </script>
+</body>
+
+</html>
