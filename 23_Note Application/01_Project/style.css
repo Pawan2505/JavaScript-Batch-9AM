@@ -1,0 +1,70 @@
+#notes-wrapper{
+display: flex;
+flex-direction: column;
+gap: 32px;
+}
+
+.note{
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    border: 1px solid #dadada;
+    border-radius: 6px;
+    padding: 16px;
+}
+
+.note-title{
+    font-weight: bold;
+    color: #333;
+    background-color: #f8f9fa;
+    padding: 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.note-date{
+    font-size: 0.75rem;
+    text-align: right;
+    padding-top: 16px;
+    width: 100%;
+    margin-top: auto;
+}
+
+
+.note-controls{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: white;
+    font-size: 0.75rem;
+    column-gap: 8px;
+    padding: 8px;
+    display: flex;
+    opacity: 0;
+    transition: opacity 350ms;
+
+}
+
+
+.note:hover .note-controls{
+    opacity: 1;
+}
+
+.note-controls button{
+    padding: 0.5rem;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;  
+}
+
+.note-delete{
+    color: #bb0000;
+}
+
+.note-edit{
+    color: #00bb00;
+}
+
+.note-save{
+    color: #0000bb;
+}
