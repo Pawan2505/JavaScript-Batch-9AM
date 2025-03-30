@@ -1,70 +1,78 @@
-#notes-wrapper{
-display: flex;
-flex-direction: column;
-gap: 32px;
+/* Wrapper for all notes */
+#notes-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* Adds space between notes */
 }
 
-.note{
-    position: relative;
-    overflow: hidden;
-    background-color: white;
-    border: 1px solid #dadada;
-    border-radius: 6px;
-    padding: 16px;
+/* Individual note styling */
+.note {
+  position: relative; /* Needed for absolute positioning of controls */
+  overflow: hidden; /* Ensures content doesn't overflow the note box */
+  background: white; /* White background for the note */
+  border: 1px solid #dadada; /* Light border around the note */
+  border-radius: 6px; /* Rounded corners */
+  padding: 16px; /* Padding inside the note */
 }
 
-.note-title{
-    font-weight: bold;
-    color: #333;
-    background-color: #f8f9fa;
-    padding: 8px;
-    border-radius: 4px;
-    margin-bottom: 12px;
+/* Note title styling */
+.note-title {
+  font-weight: bold; /* Bold font for the title */
+  color: #333; /* Dark grey text color */
+  background-color: #f8f9fa; /* Light background color */
+  padding: 8px; /* Padding inside the title */
+  border-radius: 4px; /* Rounded corners for title */
+  margin-bottom: 12px; /* Space below the title */
 }
 
-.note-date{
-    font-size: 0.75rem;
-    text-align: right;
-    padding-top: 16px;
-    width: 100%;
-    margin-top: auto;
+/* Note date styling (positioned at the bottom of the note) */
+.note-date {
+  font-size: 0.75em; /* Smaller text for the date */
+  text-align: right; /* Right-align the date */
+  border-top: 1px solid #dadada; /* Divider line above the date */
+  padding-top: 16px; /* Space above the date */
+  width: 100%; /* Ensures the date takes full width */
+  margin-top: auto; /* Pushes the date to the bottom */
 }
 
-
-.note-controls{
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: white;
-    font-size: 0.75rem;
-    column-gap: 8px;
-    padding: 8px;
-    display: flex;
-    opacity: 0;
-    transition: opacity 350ms;
-
+/* Controls for the note (edit, save, delete buttons) */
+.note-controls {
+  position: absolute; /* Absolute positioning relative to the note */
+  right: 0; /* Align controls to the right */
+  top: 0; /* Align controls to the top */
+  background-color: white; /* White background for the controls */
+  font-size: 0.75rem; /* Smaller font size for the buttons */
+  column-gap: 8px; /* Space between buttons */
+  padding: 8px; /* Padding inside the controls */
+  display: flex; /* Flex layout for button alignment */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 350ms; /* Smooth transition for showing controls */
 }
 
-
-.note:hover .note-controls{
-    opacity: 1;
+/* Show controls when hovering over the note */
+.note:hover .note-controls {
+  opacity: 1; /* Show controls when the note is hovered */
 }
 
-.note-controls button{
-    padding: 0.5rem;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;  
+/* Button styling inside note controls */
+.note-controls button {
+  padding: 0.5rem; /* Padding around buttons */
+  border: none; /* Remove borders from buttons */
+  background-color: transparent; /* Transparent background */
+  cursor: pointer; /* Change cursor to pointer for better UX */
 }
 
-.note-delete{
-    color: #bb0000;
+/* Delete button specific styling */
+.note-delete {
+  color: #bb0000; /* Red color for the delete button */
 }
 
-.note-edit{
-    color: #00bb00;
+/* Edit button specific styling */
+.note-edit {
+  color: #00bb00; /* Green color for the edit button */
 }
 
-.note-save{
-    color: #0000bb;
+/* Save button specific styling */
+.note-save {
+  color: #0000bb; /* Blue color for the save button */
 }
