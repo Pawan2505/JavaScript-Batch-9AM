@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    
+    <nav class="navbar">
+    <h2>My E-commerce</h2>
+    <div class="menu">
+        <input type="text" id="searchBox" placeholder="Search Product..">
+        <select id="sortPrice">
+            <option value="">sort by price</option>
+            <option value="low">low to high</option>
+            <option value="high">high to low</option>
+        </select>
+
+        <button onclick="viewcart()">🛒 Cart(<span id="cart-count">0</span>)</button>
+
+    </div>
+    </nav>
+
+    <!-- Product List -->
+
+    <div id="product-list" class="product-grid"></div>
+
+    <!-- Cart Page -->
+
+    <div id="cartPage" class="cart  hidden">
+    <h2>Sopping Cart</h2>
+    <div id="cart-items"></div>
+
+    <button onclick="closeCart()">Close Cart</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
