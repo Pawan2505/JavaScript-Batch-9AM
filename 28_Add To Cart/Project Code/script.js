@@ -50,7 +50,7 @@ function displayProducts(filterText = "", sort = "") {
 function addToCart(id) {
   const product = products.find((p) => p.id === id);
 
-  const existingItem = cart.find((item) => (item.id = id));
+  const existingItem = cart.find((item) => item.id === id);
 
   if (existingItem) {
     existingItem.quantity += 1;
@@ -101,5 +101,45 @@ function viewcart() {
     cartItems.appendChild(cartItem);
   });
 }
+
+// Quantity increment
+
+function incrementCart(id) {
+  cart = cart.map((item) =>
+    item.id === id ? { ...item, quantity: item.quantity + 1 } : item
+  );
+  viewcart();
+  updateCartCount();
+}
+
+// Quantity Decrement
+
+function decrementCart(id) {
+  cart = cart
+    .map((item) =>
+      item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+    )
+    .filter((item) => item.quantity > 0);
+  viewcart();
+  updateCartCount();
+}
+
+// close cart
+
+function closeCart() {
+  document.getElementById("cartPage").classList.add("hidden");
+}
+
+// Searching and Sorting
+
+document.getElementById("searchBox").addEventListener("input", (e) => {
+  displayProducts(e.target.value);
+});
+
+// Sort by price
+
+document.getElementById("sortPrice").addEventListener("change", (e) => {
+  displayProducts(document.getElementById("searchBox").value, e.target.value);
+});
 
 fetchProducts();

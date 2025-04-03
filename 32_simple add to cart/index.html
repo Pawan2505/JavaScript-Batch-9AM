@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+</head>
+
+<body>
+    <div class="product">
+        <h2>Product 1</h2>
+        <p>Rs 10.00</p>
+        <button onclick="addToCart('Product 1', 10.00)">Add To Cart</button>
+    </div>
+
+    <div class="product">
+        <h2>Product 2</h2>
+        <p>Rs 20.00</p>
+        <button onclick="addToCart('Product 2', 20.00)">Add To Cart</button>
+    </div>
+
+    <h2>Cart</h2>
+    <ul id="cart">
+
+    </ul>
+
+
+    <script>
+        const cart = {};
+
+        function addToCart(productName, productPrice) {
+            if (cart[productName]) {
+                cart[productName].quantity += 1;
+                cart[productName].totalPrice += productPrice;
+            } else {
+                cart[productName] = {
+                    quantity: 1,
+                    totalPrice: productPrice
+                };
+            }
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cart');
+            cartList.innerHTML = '';
+
+            for (let product in cart) {
+                console.log(product);
+                console.log(cart[product]);
+                const listItem = document.createElement('li');
+                listItem.innerText = `${product} - Quantity : ${cart[product].quantity} - Total Price :Rs${cart[product].totalPrice.toFixed(2)}`;
+                cartList.appendChild(listItem);
+            }
+        }
+    </script>
+</body>
+
+</html>
