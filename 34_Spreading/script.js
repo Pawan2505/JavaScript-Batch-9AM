@@ -1,91 +1,94 @@
-// Array
+// ========================================
+// Array and Object Operations in JavaScript
+// ========================================
 
-// array copy karna
+// ----------------------------------------------------
+// 1. Copying an Array using Spread Operator
+// ----------------------------------------------------
 
-// let arr = [1, 2, 3, 4, 5];
+let arr = [1, 2, 3, 4, 5];
+let newArray = [...arr];
 
-// let newArray = [...arr];
+console.log(newArray);
+// Output: [1, 2, 3, 4, 5]
 
-// console.log(newArray);
+// ----------------------------------------------------
+// 2. Adding New Elements to an Array
+// ----------------------------------------------------
 
-// new element add karna
+// Add one element at the end
+let arrayWithOne = [...arr, "Pawan"];
+console.log(arrayWithOne);
+// Output: [1, 2, 3, 4, 5, "Pawan"]
 
-// let arr = [1, 2, 3, 4, 5];
+// Add elements at beginning and end
+let arrayWithMultiple = [true, ...arr, "Pawan"];
+console.log(arrayWithMultiple);
+// Output: [true, 1, 2, 3, 4, 5, "Pawan"]
 
-// let newArray = [...arr,"Pawan"];
+// Overwrite original array with new value added
+arr = [...arr, "Pawan"];
+console.log(arr);
+// Output: [1, 2, 3, 4, 5, "Pawan"]
 
-// console.log(newArray);
+// ----------------------------------------------------
+// 3. Merging Two Arrays
+// ----------------------------------------------------
 
-// let arr = [1, 2, 3, 4, 5];
+const numbers1 = [23, 56, 89, 50];
+const numbers2 = [213, 45, 7, 7];
 
-// let newArray = [true,...arr, "Pawan"];
+let mergedArray = [...numbers1, ...numbers2];
+console.log(mergedArray);
+// Output: [23, 56, 89, 50, 213, 45, 7, 7]
 
-// console.log(newArray);
+// ========================================
+// Object Operations in JavaScript
+// ========================================
 
-// let arr = [1, 2, 3, 4, 5];
+// ----------------------------------------------------
+// 4. Copying an Object
+// ----------------------------------------------------
 
-// arr = [...arr, "Pawan"];
+const obj1 = {
+  id: 1,
+  name: "Sejal",
+};
 
-// console.log(arr);
+const obj2 = { ...obj1 };
+console.log(obj2);
+// Output: { id: 1, name: "Sejal" }
 
-// 2 array -> merge karana
+// ----------------------------------------------------
+// 5. Merging Two Objects
+// ----------------------------------------------------
 
-// const numbers1 = [23, 56, 89, 50];
-// const numbers2 = [213, 45, 7, 7];
-
-// let mergeArray = [...numbers1,...numbers2]
-
-// console.log(mergeArray)
-
-// object
-
-// object copy karana
-
-// const obj1 = {
-//     id:1,
-//     name: "Sejal",
-// }
-
-// const obj2 = { ...obj1 };
-
-// console.log(obj2)
-
-// 2 object ko merge karana
-
-// let obj1 = {
-//   name: "dhruv",
-//   salary: 10000000000,
-// };
-
-// const obj2 = {
-//     id: 1,
-//     name:"nency"
-// };
-
-// const obj3 = { ...obj1, ...obj2 };
-
-// console.log(obj3);
-
-
-// update object karana
-
-// let obj1 = {
-//   name: "dhruv",
-//   salary: 10000000000,
-// };
-
-// obj1 = { ...obj1, salary: 10000 }
-
-// console.log(obj1);
-
-
-// new properties add karana
-
-let obj1 = {
-  name: "dhruv",
+let employee1 = {
+  name: "Dhruv",
   salary: 10000000000,
 };
 
-obj1 = { id:1,...obj1, Address: "Gujrat" }
+const employee2 = {
+  id: 1,
+  name: "Nency", // This will override 'name' from employee1
+};
 
-console.log(obj1);
+const mergedObject = { ...employee1, ...employee2 };
+console.log(mergedObject);
+// Output: { name: "Nency", salary: 10000000000, id: 1 }
+
+// ----------------------------------------------------
+// 6. Updating an Object Property
+// ----------------------------------------------------
+
+employee1 = { ...employee1, salary: 10000 };
+console.log(employee1);
+// Output: { name: "Dhruv", salary: 10000 }
+
+// ----------------------------------------------------
+// 7. Adding New Properties to an Object
+// ----------------------------------------------------
+
+employee1 = { id: 1, ...employee1, address: "Gujrat" };
+console.log(employee1);
+// Output: { id: 1, name: "Dhruv", salary: 10000, address: "Gujrat" }
