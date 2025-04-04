@@ -1,81 +1,70 @@
-## **Lecture Notes: Fetch API with Dog API**
+## Fetch API with Dog API
 
-### **1. Introduction**
-- **Objective**: Understand what APIs are and how they work.
-- **Key Points**:
-  - **API** stands for Application Programming Interface. It’s like a messenger that takes requests and returns data.
-  - The **Fetch API** is a tool in JavaScript to get data from the internet.
-  - The **Dog API** is a fun API that gives us pictures of dogs!
-
----
-
-### **2. Basics of Fetch API**
-- **Objective**: Learn how to use the Fetch API to get data.
-- **Key Points**:
-  - The Fetch API uses `fetch(url)` to request data from a server.
-  - It returns a **Promise**, which is like a placeholder for data that will arrive later.
-  - We use `.then()` to handle the data when it arrives.
-  - Example:
-    ```javascript
-    fetch('https://dog.ceo/api/breeds/image/random')
-      .then(response => response.json()) // Convert response to JSON
-      .then(data => console.log(data.message)); // Log the dog image URL
-    ```
+### 1. What is an API?
+- API means **Application Programming Interface**.
+- It helps one program talk to another.
+- Example: Dog API gives us random dog images from the internet.
+- We’ll use JavaScript’s **Fetch API** to get this data.
 
 ---
 
-### **3. Exploring the Dog API**
-- **Objective**: Learn about the Dog API and its endpoints.
-- **Key Points**:
-  - Dog API URL: `https://dog.ceo/api/`
-  - Endpoints:
-    - Random dog image: `https://dog.ceo/api/breeds/image/random`
-    - List all breeds: `https://dog.ceo/api/breeds/list/all`
-  - Example: Fetching a random dog image:
-    ```javascript
-    fetch('https://dog.ceo/api/breeds/image/random')
-      .then(response => response.json())
-      .then(data => console.log(data.message)); // URL of the dog image
-    ```
+### 2. What is Fetch API?
+- `fetch()` is used to **get data from the internet**.
+- It returns a **Promise**, which means the result will come later.
+- Basic example:
+  ```javascript
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(response => response.json())  // Convert to JSON
+    .then(data => console.log(data.message)); // Show image URL
+  ```
 
 ---
 
----
-
-### **4. Error Handling**
-- **Objective**: Learn how to handle errors when fetching data.
-- **Key Points**:
-  - Use `.catch()` to handle errors (e.g., no internet connection).
-  - Example:
-    ```javascript
-    fetch('https://dog.ceo/api/breeds/image/random')
-      .then(response => response.json())
-      .then(data => console.log(data.message))
-      .catch(error => console.error('Oops! Something went wrong:', error));
-    ```
+### 3. Dog API Basics
+- Website: [https://dog.ceo/api](https://dog.ceo/api)
+- Useful links:
+  - Random image: `https://dog.ceo/api/breeds/image/random`
+  - All breeds: `https://dog.ceo/api/breeds/list/all`
+- Try it:
+  ```javascript
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(response => response.json())
+    .then(data => console.log(data.message));
+  ```
 
 ---
 
-### **5. Fetching Dog Breeds**
-- **Objective**: Fetch and display a list of dog breeds.
-- **Steps**:
-  1. Use the endpoint: `https://dog.ceo/api/breeds/list/all`.
-  2. Display the list in a `<ul>` element.
-  3. Example:
-     ```javascript
-     fetch('https://dog.ceo/api/breeds/list/all')
-       .then(response => response.json())
-       .then(data => {
-         const breeds = Object.keys(data.message); // Get list of breeds
-         const breedList = document.createElement('ul');
-         breeds.forEach(breed => {
-           const listItem = document.createElement('li');
-           listItem.textContent = breed;
-           breedList.appendChild(listItem);
-         });
-         document.body.appendChild(breedList);
-       })
-       .catch(error => console.error('Error fetching breeds:', error));
-     ```
+### 4. How to Handle Errors
+- Sometimes the API might not work (no internet, wrong URL, etc.).
+- We can catch errors using `.catch()`.
+- Example:
+  ```javascript
+  fetch('https://dog.ceo/api/breeds/image/random')
+    .then(response => response.json())
+    .then(data => console.log(data.message))
+    .catch(error => console.log('Something went wrong:', error));
+  ```
+
+---
+
+### 5. Show Dog Breeds on Webpage
+- This shows a list of all dog breeds.
+- We use the endpoint: `https://dog.ceo/api/breeds/list/all`
+- Example:
+  ```javascript
+  fetch('https://dog.ceo/api/breeds/list/all')
+    .then(response => response.json())
+    .then(data => {
+      const breeds = Object.keys(data.message);
+      const breedList = document.createElement('ul');
+      breeds.forEach(breed => {
+        const listItem = document.createElement('li');
+        listItem.textContent = breed;
+        breedList.appendChild(listItem);
+      });
+      document.body.appendChild(breedList);
+    })
+    .catch(error => console.log('Error:', error));
+  ```
 
 ---
