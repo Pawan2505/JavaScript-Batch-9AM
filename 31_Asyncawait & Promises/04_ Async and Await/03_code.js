@@ -1,7 +1,7 @@
 function getData() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log("Step 1: getData()");
+      console.log("Step 1: getData()");  
       resolve("DataA");
     }, 1000);
   });

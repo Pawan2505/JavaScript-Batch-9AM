@@ -1,6 +1,8 @@
+let URL = "https://dummyjson.com/products";
+
 async function fetchData() {
   try {
-      let response = await fetch("https://dummyjson.com/products");
+      let response = await fetch(URL);
       console.log(response)
     let data = await response.json();
     console.log(data);
