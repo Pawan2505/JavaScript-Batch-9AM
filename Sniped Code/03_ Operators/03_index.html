@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="comparison"></p>
+<script>
+  let a = 10;
+  let b = "10";
+
+  let output = `
+    a == b: ${a == b} <br>
+    a === b: ${a === b} <br>
+    a != b: ${a != b} <br>
+    a !== b: ${a !== b} <br>
+    a > 5: ${a > 5}
+  `;
+
+  console.log("Comparison Operators:\n", output);
+  document.getElementById("comparison").innerHTML = output;
+</script>
+
+</body>
+</html>

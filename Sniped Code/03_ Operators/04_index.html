@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="logical"></p>
+<script>
+  let age = 20;
+  let hasLicense = true;
+
+  let canDrive = age >= 18 && hasLicense;
+  let isTeen = age >= 13 && age <= 19;
+  let isNotTeen = !isTeen;
+
+  let result = `
+    Can Drive: ${canDrive} <br>
+    Is Teenager: ${isTeen} <br>
+    Is Not Teenager: ${isNotTeen}
+  `;
+
+  console.log("Logical Operators Result:\n", result);
+  document.getElementById("logical").innerHTML = result;
+</script>
+
+</body>
+</html>

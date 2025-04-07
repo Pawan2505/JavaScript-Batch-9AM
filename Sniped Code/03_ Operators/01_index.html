@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<p id="arithmetic"></p>
+<script>
+  let a = 10, b = 3;
+  let result = `
+    Addition: ${a + b} <br>
+    Subtraction: ${a - b} <br>
+    Multiplication: ${a * b} <br>
+    Division: ${a / b} <br>
+    Modulus: ${a % b} <br>
+    Exponent: ${a ** b}
+  `;
+  console.log("Arithmetic Result:\n", result);
+  document.getElementById("arithmetic").innerHTML = result;
+</script>
+
+</body>
+</html>

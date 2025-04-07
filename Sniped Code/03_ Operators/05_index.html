@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="conversion"></p>
+<script>
+  let str = "123";
+  let num = Number(str); 
+
+  let result = `
+    Original (string): "${str}" (type: ${typeof str}) <br>
+    After Conversion: ${num} (type: ${typeof num}) <br>
+    Boolean(0): ${Boolean(0)} <br>
+    Boolean('hello'): ${Boolean('hello')} <br>
+    String(10 + 5): ${String(10 + 5)}
+  `;
+
+  console.log("Type Conversion:\n", result);
+  document.getElementById("conversion").innerHTML = result;
+</script>
+
+</body>
+</html>
