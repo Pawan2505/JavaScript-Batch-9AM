@@ -19,9 +19,9 @@ function getMoreData(a) {
 
 // Async function to handle all steps
 async function getAllData() {
-  let a = await getData(); // Step 1
-  let b = await getMoreData(a); // Step 2
-  console.log("Final Result:", b); // Final Output
+  // let a = await getData(); // Step 1
+  // let b = await getMoreData(a); // Step 2
+  // console.log("Final Result:", b); // Final Output
 }
 
 // Call the main function
