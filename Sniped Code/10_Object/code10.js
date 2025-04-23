@@ -8,5 +8,7 @@ let student = {
 let jsonData = JSON.stringify(student);
 console.log(jsonData);
 
+console.log(typeof jsonData);
+
 let parsedObj = JSON.parse(jsonData);
 console.log(parsedObj);
